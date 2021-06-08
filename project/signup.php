@@ -10,6 +10,7 @@ include("header.php");
             <br />
             <br />
             <br />
+                <form action="save.php" method="post">
             <div class="row">
                 <div class="col-md-6 offset-md-3">
                     <div class="card">
@@ -19,15 +20,15 @@ include("header.php");
                         <div class="card-body">
                             <div class="form-group">
                                 <label>Full Name</label>
-                                <input type="text" class="form-control">
+                                <input name="full_name" type="text" class="form-control">
                             </div>
                             <div class="form-group">
                                 <label>Username</label>
-                                <input type="text" class="form-control">
+                                <input name="username" type="text" class="form-control">
                             </div>
                             <div class="form-group">
                                 <label>Password</label>
-                                <input type="password" class="form-control">
+                                <input name="password" type="password" class="form-control">
                             </div>
                             <div class="form-group">
                                 <label>Re-Password</label>
@@ -35,22 +36,22 @@ include("header.php");
                             </div>
                             <div class="form-group">
                                 <label>Address</label>
-                                <textarea class="form-control"></textarea>
+                                <textarea name="add" class="form-control"></textarea>
                             </div>
                             <div class="form-group">
                                 <label>Contact</label>
-                                <input type="text" class="form-control">
+                                <input name="contact" type="text" class="form-control">
                             </div>
                             <div class="form-group">
                                 <label>Gender</label>
                                 <br/>
                                 <br/>
-                                Male <input type="radio" name="gender">
-                                Female <input type="radio" name="gender">
+                                Male <input type="radio" value="male" name="gender">
+                                Female <input type="radio" value="female" name="gender">
                             </div>
                             <div class="form-group">
                                 <label>City</label>
-                                <select class="form-control">
+                                <select name="city" class="form-control">
                                     <option>Select</option>
                                     <option>Indore</option>
                                     <option>Mumbai</option>
@@ -59,10 +60,11 @@ include("header.php");
                             </div>
                         </div>
                         <div class="card-footer">
-                            <input type="submit" class="site-btn" value="Login">
+                            <input type="submit" class="site-btn" value="Signup">
                         </div>
                     </div>
                 </div>
+                </form>
             </div>
         </div>
     </div>
