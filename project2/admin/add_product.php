@@ -1,3 +1,6 @@
+<?php
+include("db.php");
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -54,12 +57,15 @@
             <label>Product Category</label>
             <select name="pro_cate" class="form-control">
               <option>Select</option>
-              <option>Home Appliance</option>
-              <option>Electronics</option>
-              <option>Mobiles</option>
-              <option>Laptop & Computer</option>
-              <option>Fashion Mens</option>
-              <option>Fashion Womens</option>
+              <?php
+              $query = "SELECT * FROM category";
+              $result = mysqli_query($con, $query);
+              while($data = mysqli_fetch_assoc($result))
+              {
+                echo "<option>".$data['category_name']."</option>";
+              }
+
+              ?>  
             </select>
           </div>
           <div class="form-group">
