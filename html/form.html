@@ -49,32 +49,38 @@
     </head>
     <body>
         <h1>My Form</h1>
+        <fieldset>
+            <legend>My Form</legend>
         <form>
             <input type="hidden" />
 
-            Full Name
+            <!-- Full Name -->
             <br />
-            <input type="text" />
+            <input type="text" placeholder="Full Name" value="Gaurav"/>
             <hr />
+            Email
+            <br />
+            <input type="text" placeholder="Email" value="hello@gmail.com" disabled/>
+            <Br />
             Password
             <br />
-            <input type="password" />
+            <input type="password" placeholder="Password" value="123"/>
             <hr />
             Gender
             <br />
-            <input type="radio" name="gender"/> Male
+            <input type="radio" checked name="gender"/> Male
             <input type="radio" name="gender"/> Female
             <hr />
             Hobby
             <br />
-            <input type="checkbox" />Cricket
+            <input type="checkbox" checked/>Cricket
             <input type="checkbox" />Football
-            <input type="checkbox" />Music
+            <input type="checkbox" checked/>Music
             <input type="checkbox" />Internet
             <hr />
             Address
             <br />
-            <textarea cols="30" rows="5"></textarea>
+            <textarea cols="30" rows="5" placeholder="Address">M.G. Road</textarea>
             <hr />
             City
             <br />
@@ -82,7 +88,7 @@
                 <option>Select City</option>
                 <option>Indore</option>
                 <option>Mumbai</option>
-                <option>Pune</option>
+                <option selected>Pune</option>
                 <option>Delhi</option>
             </select>
             <br />
@@ -98,5 +104,6 @@
             <br />
             <input type="submit" value="Save" />
         </form>
+    </fieldset>
     </body>
 </html>
