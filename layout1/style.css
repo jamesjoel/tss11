@@ -1,0 +1,25 @@
+body{
+    background-color: #668899;
+    margin: 0;
+    padding: 0;
+}
+.header{
+    height: 40px;
+    width: 100%;
+    background-color: #993366;
+}
+.navbar{
+    height: 150px;
+    width: 100%;
+    background-color: #FFFFFF;
+}
+.slider{
+    height: 400px;
+    width: 100%;
+    background-color: #ACDCD1;
+}
+.wrapper{
+    width: 970px;
+    /* background-color: red; */
+    margin: 0 auto;
+}
