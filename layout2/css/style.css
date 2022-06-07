@@ -1,0 +1,169 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica;
+}
+.header{
+    height: 100px;
+    width: 100%;
+    background-color: #1A1A1A;
+}
+.navbar{
+    height: 40px;
+    width: 100%;
+    background-color: #F30927;
+}
+.content{
+    min-height: 800px;
+    height: auto;
+    width: 100%;
+    background-color: #c4c4c4;
+}
+.company{
+    height: 150px;
+    width: 100%;
+    background-color: #F30927;
+}
+.footer{
+    height: 200px;
+    width: 100%;
+    background-color: #1A1A1A;
+}
+.bottom-footer{
+    height: 80px;
+    width: 100%;
+    background-color: #000000;
+}
+.logo{
+    height: 100px;
+    width: 250px;
+    float: left;
+    /* background-color: blue; */
+}
+
+.logo h1{
+    color: #fff;
+    font-size: 35px;
+}
+.logo h1 span{
+    color: #F30927;
+}
+
+.search{
+    float: left;
+    height: 100px;
+    width: 720px;
+    text-align: right;
+    /* background-color: green; */
+}
+.search input{
+    height: 40px;
+    width: 500px;
+    margin: 28px;
+}
+
+
+
+.wrapper{
+    
+    width: 970px;
+    
+    margin: 0 auto;
+}
+
+.category{
+    width: 250px;
+    height: 40px;
+    /* background-color: blue; */
+    float: left;
+}
+.category h3{
+    margin-top: 10px;
+    font-size: 16px;
+    padding: 0;
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+}
+.menu{
+    float: left;
+    width: 720px;
+    height: 40px;
+    /* background-color: green; */
+}
+.menu ul{
+    margin: 0;
+    padding: 0;
+}
+.menu ul li{
+    list-style-type: none;
+    float: left;
+}
+.menu ul li a{
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 11px 25px;
+}
+.menu ul li a:hover{
+    background-color: #1A1A1A;
+}
+.left-content{
+    width: 250px;
+    /* background-color: blue; */
+    height: 800px;
+    float: left;
+}
+.right-content{
+    float: left;
+    width: 720px;
+    /* background-color: green; */
+    height: 800px;
+}
+.left-nav{
+    height: 400px;
+    width: 200px;
+    background-color: #fff;
+    margin: 0 25px;
+}
+.left-nav ul{
+    margin: 0;
+    padding: 0;
+    
+}
+.left-nav ul li{
+    list-style-type: none;
+}
+.left-nav ul li a{
+    color: #000000;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+    font-size: 15px;
+    border-bottom: 1px solid #1A1A1A;
+}
+.left-nav ul li a span{
+    font-size: 14px;
+}
+
+
+.left-nav ul li a:hover{
+    background-color: #F30927;
+    color: #fff;
+}
+.slider{
+    height: 350px;
+    width: 720px;
+    background-color: #FFCB75;
+}
+.product{
+    height: 430px;
+    margin-top: 20px;
+    width: 720px;
+    background-color: #fff;
+}
+.product h3{
+    padding: 10px;
+    border-bottom: 1px solid #1A1A1A;
+}
