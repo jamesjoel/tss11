@@ -105,6 +105,7 @@ body{
     text-transform: uppercase;
     display: inline-block;
     padding: 11px 25px;
+    transition: 1s;
 }
 .menu ul li a:hover{
     background-color: #1A1A1A;
@@ -142,6 +143,7 @@ body{
     display: block;
     font-size: 15px;
     border-bottom: 1px solid #1A1A1A;
+    transition: 1s;
 }
 .left-nav ul li a span{
     font-size: 14px;
@@ -157,6 +159,40 @@ body{
     width: 720px;
     background-color: #FFCB75;
 }
+.slider-top{
+    height: 270px;
+    width: 720px;
+    /* background-color: blue; */
+}
+.slider-bottom{
+    height: 80px;
+    width: 720px;
+    background-color: #F30927;
+}
+.slider-bottom-box{
+    height: 80px;
+    width: 200px;
+    /* background-color: green; */
+    float: left;
+    margin: 0 20px;
+}
+.slider-bottom-box h2{
+    margin-top: 10px;
+    margin-bottom: 0;
+    padding: 0;
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+}
+.slider-bottom-box p{
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    font-size: 12px;
+    text-align: center;
+}
+
+
 .product{
     height: 430px;
     margin-top: 20px;
@@ -166,4 +202,53 @@ body{
 .product h3{
     padding: 10px;
     border-bottom: 1px solid #1A1A1A;
+}
+.product-box{
+    width: 160px;
+    height: 220px;
+    /* background-color: red; */
+    float: left;
+    margin: 5px 10px;
+    transition: 1s;
+}
+
+.product-box:hover{
+    box-shadow: 0px 0px 20px #000;
+    cursor: pointer;
+}
+
+
+
+.product-box img{
+    height: 150px;
+    width: 160px;
+    border-radius: 3px 3px 0 0;
+}
+
+
+.product-box p{
+    margin-top: 10px;
+    margin-bottom: 5px;
+    padding: 0;
+    text-align: center;
+}
+.product-box .price{
+    font-size: 14px;
+    margin-top: 0px;
+}
+.product-box .price del{
+    color: #6d6969;
+}
+.product-box a{
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    background-color: #F30927;
+    color: #fff;
+    border-radius: 3px;
+    font-size: 14px;
+    padding: 3px;
+}
+.product-box a:hover{
+    background-color: #1A1A1A;
 }
