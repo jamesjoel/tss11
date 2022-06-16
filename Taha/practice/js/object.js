@@ -34,4 +34,4 @@ var car=[
         price:500000
     }
 ]
-console.log(car[3].type[0]);
+console.log(car[3].type[1]);
