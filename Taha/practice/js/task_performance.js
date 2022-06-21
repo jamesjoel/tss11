@@ -1,10 +1,12 @@
 var maths=34;
-var science=34;
-var english=23;
-var actual=maths+science+english;
+var science=44;
+var english=53;
+var actual= maths+science+english ;
 var total = (actual/300)*100;
 
-var attendence=40;
+var attendence=30;
+
+
 function performance(t,a){
     if(t>80 && t<=100){
         if(a>80 && a<=100){
@@ -88,6 +90,10 @@ function performance(t,a){
     }
     else if(a>40){
         console.log("poor");
+    }
+    else 
+    {
+        console.log("number not defined correctly");
     }
 }
 performance(total,attendence);
