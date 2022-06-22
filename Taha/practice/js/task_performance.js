@@ -1,18 +1,15 @@
-<<<<<<< HEAD
-=======
-var maths=34;
-var science=44;
+var maths=54;
+var science=74;
 var english=53;
 var actual= maths+science+english ;
 
 var total = (actual/300)*100;
 
-var attendence=30;
+var attendence=70;
 var grade="";
 
-
+console.log(total ,attendence)
 function performance(t,a){
-if (t == true || a == true){
     if(t>80 && t<=100){
         if(a>80 && a<=100){
                 grade="Excellent";
@@ -96,12 +93,7 @@ if (t == true || a == true){
         grade="poor";
         }
     }
-}
-else{
-        grade="number not defined correctly";
-}
-    return grade;
+return grade;
 }
 performance(total,attendence);
 console.log(grade);
->>>>>>> 059f692f912027f908d04ab85b3ee806f7f29520
