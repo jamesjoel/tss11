@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-=======
+// hello
 var maths=34;
 var science=44;
 var english=53;
@@ -104,4 +103,4 @@ else{
 }
 performance(total,attendence);
 console.log(grade);
->>>>>>> 059f692f912027f908d04ab85b3ee806f7f29520
+
