@@ -1,9 +1,7 @@
-function studentResult() {
-  var sub1 = 72;
-  var sub2 = 50;
-  var sub3 = 37;
+function studentResult(sub1, sub2, sub3, attend) {
+  
   var totalMarks = sub1 + sub2 + sub3;
-  var attend = 60;
+  
 
   console.log("Total Marks " + totalMarks);
 
@@ -41,4 +39,4 @@ function studentResult() {
   checkResult(attend, percent);
 }
 
-studentResult();
+studentResult(74, 87, 91, 64);
