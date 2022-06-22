@@ -1,0 +1,22 @@
+.bg-orange{
+    background-color: #C70039 ;
+}
+
+.bg-light-orange{
+    background-color: #EABBB1 ;
+}
+
+.slider{
+    height: 300px;
+}
+
+
+.slider img{
+    height: 100%;
+    width: 100%;
+}
+
+.content{
+    min-height: 800px;
+    height: auto;
+}
