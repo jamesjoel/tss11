@@ -3,8 +3,13 @@ var obj = {
     age : 19,
     city : "indore",
     gender : "female",
-    demo : function(){
-        console.log("************");
+    demo : function(a, b){
+        return {
+            result : a+b,
+            hello : function(){
+                console.log("****************************");
+            }
+        };
     }
 };
 
