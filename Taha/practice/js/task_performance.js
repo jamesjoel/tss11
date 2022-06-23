@@ -8,7 +8,7 @@ var total = (actual/300)*100;
 var attendence=70;
 var grade="";
 
-console.log(total ,attendence)
+// console.log(total ,attendence)
 function performance(t,a){
     if(t>80 && t<=100){
         if(a>80 && a<=100){
@@ -97,4 +97,5 @@ return grade;
 }
 performance(total,attendence);
 // console.log(grade);
-module.exports = grade;
+var performances=[grade,attendence,total];
+module.exports = performances;
