@@ -12,6 +12,8 @@ function reverse(arr){
     return x;
 }
 var arr1=reverse(arr);
+
+// return;
 // console.log(arr1);
 
 // !=========================== LEAP YEAR  =====================!

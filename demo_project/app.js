@@ -1,8 +1,9 @@
-var x = require;
 
-var obj = x("./a");
 
-var a = obj.demo;
-a();
+var obj = require("./a");
+
+var ans = obj.demo(10, 20);
+
+ans.hello();
 
 
