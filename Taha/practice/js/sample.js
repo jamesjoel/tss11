@@ -1,9 +1,9 @@
 // !=========================== REVERSE ARRAY =====================!
 
 var arr=["taha","raghav","shyam","tushar"];
-function reverse(){
-    var a=arr.length-1;
+function reverse(arr){
     var arr1=[];
+    var a=arr.length-1;
     while(a>=0){
         arr1=arr[a];
         var x=console.log(arr1);
@@ -12,7 +12,7 @@ function reverse(){
     return x;
 }
 var arr1=reverse(arr);
-console.log(arr1);
+// console.log(arr1);
 
 // !=========================== LEAP YEAR  =====================!
 
@@ -23,7 +23,7 @@ function leap_year(year){
     return leap;
 }
 var leap = leap_year(year);
-console.log(leap);
+// console.log(leap);
 
 
 // !=========================== GST  =====================!
@@ -52,7 +52,7 @@ function bill(slab,gst,price,yes){
     
 }
 var bills=bill(slab,gst,price,yes);
-console.log(bills);
+// console.log(bills);
 
 
 // !=========================== ROOM ALLOTMENT  =====================!
@@ -79,7 +79,7 @@ function prices(days,rooms){
 return z;
 }
 var price1 = prices(days,rooms);
-console.log(price1);
+// console.log(price1);
 
 
 

@@ -96,4 +96,5 @@ function performance(t,a){
 return grade;
 }
 performance(total,attendence);
-console.log(grade);
+// console.log(grade);
+module.exports = grade;
