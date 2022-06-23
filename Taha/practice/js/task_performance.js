@@ -1,3 +1,4 @@
+// hello
 var maths=34;
 var science=44;
 var english=53;
@@ -102,3 +103,4 @@ else{
 }
 performance(total,attendence);
 console.log(grade);
+
