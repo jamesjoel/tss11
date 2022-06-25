@@ -1,0 +1,12 @@
+#background{
+    margin: 0;
+    padding: 0;
+    /* display: flex; */
+    /* justify-content: center; */
+    /* text-align: center;  */
+    background: linear-gradient(#FCC209,#FC960D,#FD5900);
+}
+.change{
+    color: #fff;
+    background: #FCC209;
+}

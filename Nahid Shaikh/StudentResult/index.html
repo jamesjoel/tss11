@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Result</title>
+</head>
+<body>
+
+    <h1>Student Result</h1>
+   <script>
+    function studentResult() {
+  var sub1 = 80;
+  var sub2 = 72;
+  var sub3 = 60;
+  var attend = 50;
+
+  // calculating Percentage
+  var percent = ((sub1 + sub2 + sub3) * 100) / 300;
+
+  function checkResult(attend, percent) {
+    if (attend >= 60 && percent >= 70) {
+      if (attend >= 70 && percent >= 80) {
+        if (attend >= 80 && percent >= 90) {
+          console.log("Excellent");
+        } else {
+          console.log("Very Good");
+        }
+      } else {
+        console.log("Good");
+      }
+    } else {
+      console.log("Failed");
+    }
+  }
+
+  checkResult(attend, percent);
+}
+
+studentResult();
+
+   </script>
+
+</body>
+</html>
