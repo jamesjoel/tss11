@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "random-string-gen": "^1.1.4",
+    "random-string-simple": "^1.0.1"
+  }
+}

@@ -64,6 +64,7 @@ function marksheet(m,e,s,a)
 
 }
 var data= marksheet(60,60,60,250);
+console.log(data);
 
 
 
