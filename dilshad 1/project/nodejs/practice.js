@@ -86,7 +86,7 @@ function  newFun(t,a){
     }
   }
 
-
+newFun(280, 64);
 
 
 
