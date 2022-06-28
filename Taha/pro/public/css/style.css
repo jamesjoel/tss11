@@ -1,0 +1,38 @@
+.bg-orange{
+    background-color: #FF5733;
+}
+.bg-dark-orange{
+    background-color: #581845;
+}
+.bg-light-orange{
+    background-color: #F0E5E3;
+}
+
+
+
+.slider{
+    height: 300px;
+}
+.slider img{
+    height: 100%;
+    width: 100%;
+}
+.content{
+    min-height: 800px;
+    height: auto;
+}
+.content .container{
+    min-height: 800px;
+    height: auto;
+}
+.bg-dark-orange-border{
+    border: 1px solid #581845 !important;
+}
+.left-nav .nav .nav-item .nav-link{
+    
+    color: #581845;
+}
+.left-nav .nav .nav-item .nav-link:hover{
+    background-color: #581845;
+    color: #fff;
+}
