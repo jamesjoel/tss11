@@ -6,8 +6,13 @@ app.set("view engine", "ejs");
 
 app.use(express.static(__dirname+"/assets"));
 
-app.get("/", (req, res)=>{
 
+
+
+
+
+app.get("/", (req, res)=>{
+    console.log("welcome")
     var pagedata = { pagename : "home", title : "Home Page", nav : "navbar" }
     res.render("layout", pagedata);
 })
@@ -17,7 +22,7 @@ app.get("/", (req, res)=>{
 
 app.get("/about", (req, res)=>{
 
-
+    console.log("welcome")
     var pagedata = { pagename : "about", title : "About Page", nav : "navbar"  }
     res.render("layout", pagedata);
 })
@@ -25,7 +30,7 @@ app.get("/about", (req, res)=>{
 
 app.get("/contact", (req, res)=>{
 
-
+    console.log("welcome")
     var pagedata = { pagename : "contact", title : "Contact Page", nav : "navbar2"  }
     res.render("layout", pagedata);
 })
