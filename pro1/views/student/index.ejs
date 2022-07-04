@@ -2,6 +2,53 @@
     <div class="row">
         <div class="col-md-12">
             <h3>Student Page</h3>
+            <form action="/student/save" method="post">
+            <div class="row">
+                <div class="col-md-6 offset-md-3">
+                    <h4 class="text-center">Registration</h4>
+                    <div class="form-group">
+                        <label>Full Name</label>
+                        <input type="text" name="name" class="form-control" />
+                    </div>
+                    <Br />
+                    <div class="form-group">
+                        <label>Class</label>
+                        <select class="form-control" name="class">
+                            <option>Select</option>
+                            <% for(var i=1; i<=12; i++){ %>
+                                    
+                                <option><%= i %></option>
+
+                            <% } %>
+                        </select>
+                    </div>
+                    <Br />
+                    <div class="form-group">
+                        <label>Fee</label>
+                        <input type="text" class="form-control" name="fee"/>
+                    </div>
+                    <br />
+                    <div class="form-group">
+                        <label>Address</label>
+                        <textarea class="form-control" name="address"></textarea>
+                    </div>
+                    <br />
+                    <div class="form-group">
+                        <label>Contact</label>
+                        <input type="text" class="form-control" name="contact"/>
+                    </div>
+                    <br />
+                    <div class="form-group">
+                        <label>Gender</label>
+                        <Br />
+                        Boy <input type="radio"  name="gender" value="boy"/>
+                        Girl <input type="radio"  name="gender" value="girl"/>
+                    </div>
+                    <br />
+                    <input type="submit" value="Add" class="btn btn-primary" />
+                </div>
+            </div>
+        </form>
         </div>
     </div>
 </div>
