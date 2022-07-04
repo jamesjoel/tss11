@@ -5,6 +5,10 @@ const routes = require("./config/routes");
 app.set("view engine", "ejs");
 app.use(express.static(__dirname+"/assets"));
 
+app.use(express.json());
+app.use(express.urlencoded());
+
+
 app.use((req, res, next)=>{
     res.locals.currentUrl = req.originalUrl;
     // console.log(req.originalUrl);
