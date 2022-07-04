@@ -1,5 +1,5 @@
-const app=require("express");
-var routes=app.Router();
+const express=require("express");
+const routes=express.Router();
 
 
 const HomeCtrl=require("../controllers/HomeController.js");
