@@ -3,7 +3,7 @@ var routes=express.Router();
 
 
 routes.get("/",(req,res)=>{
-    var pagedata={pagename:"icons/icons",Title:"icon Page"};
+    var pagedata={pagename:"icons/icons",title:"icon Page"};
     res.render("layout" , pagedata);
 })
 
