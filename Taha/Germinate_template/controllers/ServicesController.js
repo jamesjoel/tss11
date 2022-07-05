@@ -3,7 +3,7 @@ var routes=express.Router();
 
 
 routes.get("/",(req,res)=>{
-    var pagedata={pagename:"services/services",Title:"Service Page"};
+    var pagedata={pagename:"services/services",Title:" Service Page"};
     res.render("layout",pagedata);
 })
 

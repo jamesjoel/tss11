@@ -1,0 +1,49 @@
+<form action="/student/form" method="post">
+
+    <div class="text-center display-4">Student Form</div>
+    <div class="form-group col-md-6 offset-md-4">
+    <label>Full Name</label>
+    <input type="text" class="form-control" name="Fname">
+</div>
+<br>
+<div class="form-group col-md-6 offset-md-4">
+    <label>Email</label>
+    <input type="text" class="form-control" name="email">
+</div>
+<br>
+<div class="form-group col-md-6 offset-md-4">
+    <label>password</label>
+    <input type="password" class="form-control" name="password">
+</div>
+<br>
+<div class="form-group col-md-6 offset-md-4">
+    <label>address</label>
+    <textarea class="form-control" name="address"></textarea>
+</div>
+<br>
+
+<div class="form-group col-md-6 offset-md-4">
+    <label>Class</label>
+    <select class="form-control" name="class">
+        <% for(var i=1;i<=12;i++){ %>
+            <option class="form-control"><%= i %></option>
+        <% } %>
+    </select>
+</div>
+<br>
+<div class="form-group col-md-6 offset-md-4">
+    <label>Gender:  </label>
+    Male <input type="radio"  name="gender" value="male">
+    Female <input type="radio" name="gender" value="female">
+</div>
+<br>
+<div class="form-group col-md-6 offset-md-4">
+    <label>Phone_Number</label>
+    <input type="text" class="form-control" name="pno">
+</div>
+<br>
+<div class=" col-md-6 offset-md-4">
+    <input type="submit" class="btn btn-success" value="Done">
+    <input type="clear" class="btn btn-info" value="clear">
+</div>
+</form>
