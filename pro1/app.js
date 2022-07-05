@@ -6,7 +6,7 @@ app.set("view engine", "ejs");
 app.use(express.static(__dirname+"/assets"));
 
 app.use(express.json());
-app.use(express.urlencoded());
+app.use(express.urlencoded({ extended : true }));
 
 
 app.use((req, res, next)=>{
