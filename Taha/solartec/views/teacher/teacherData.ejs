@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 offset-md-4"><h1>TeacherData</h1></div>
+    </div>
+</div>
+<table class="table table-dark table-hover table-bordered">
+    <tr>
+        <td>S.no</td>
+        <td>Name</td>
+        <td>Salary</td>
+        <td>city</td>
+        <td>gender</td>
+        <td>contact</td>
+    </tr>
+    <%  result.forEach((x,n) => { %>
+    <tr>
+        <td><%=n+1%></td>
+        <td><%=x.name%></td>
+        <td><%=x.salary%></td>
+        <td><%=x.city%></td>
+        <td><%=x.gender%></td>
+        <td><%=x.contact%></td>
+        
+    </tr>
+    <% });  %>
+
+</table>

@@ -1,5 +1,6 @@
 const express=require("express")
 const routes=express.Router();
+
 const MongoClient = require("mongodb").MongoClient;
 let dbUrl="mongodb://localhost:27017";
 let dbName="soltec";
@@ -8,6 +9,8 @@ routes.get("/",(req,res)=>{
     var pagedata={pagename:"student/student",title:"StudentBharvo"}
     res.render("layout",pagedata);
 })
+
+
 routes.post("/form",(req,res)=>{
     req.body.pno=parseInt(req.body.pno);
     req.body.class=parseInt(req.body.class);
@@ -20,10 +23,14 @@ routes.post("/form",(req,res)=>{
         db.collection(colName).insertOne(req.body,(err)=>{
             if(err){console.log(err);
             return;}
-            console.log(req.body)       
+            // console.log(req.body)       
         })
     })
+
+    
+    
 })
+
 
 
 

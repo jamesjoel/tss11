@@ -1,0 +1,60 @@
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 offset-md-4"><h1>Teacher Form</h1></div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-2 offset-md-8"><a href="/teacher/teacherData">Teacher Data</a></div>
+    </div>
+</div>
+
+
+
+<form action="/teacher/save" method="post">
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 offset-md-4">
+            <div class="form-group">
+                <label>Full_Name</label>
+                <input type="text" class="form-control" name="name"/>
+                </div>
+                <br>
+                <div class="form-group">
+                    <label>Salary</label>
+                    <input type="text" class="form-control"name="salary"/>
+                </div>
+                <br>
+                <div class="form-group">
+                    <label>city</label>
+                    <select class="form-control" name="city">
+                            <option>Select</option>
+                            <option>Indore</option>
+                            <option>Ujjain</option>
+                            <option>Bhopal</option>
+                            <option>Mumbai</option>
+                            <option>Banglore</option>
+                            <option>Pune</option>
+                    </select>
+                </div>
+                <br>
+                <div class="form-group">
+                    <label>Gender:</label>
+                    Male <input type="radio" name="gender" value="male"/>
+                    Female <input type="radio" name="gender" value="female"/>
+                </div>
+                <br>
+                <div class="form-group">
+                    <label>Contact</label>
+                    <input type="text" class="form-control" name="contact"/>
+                </div>
+                <br>
+              <input type="submit" class="btn btn-outline-danger">
+              <input type="clear" class="btn btn-outline-primary" value="reset">
+        </div>
+    </div>
+</div>
+
+</form>
