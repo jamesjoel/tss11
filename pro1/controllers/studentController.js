@@ -52,11 +52,6 @@ routes.get("/view", (req, res)=>{
             res.render("layout", pagedata);
         })
     })
-
-
-
-
-
     
 })
 

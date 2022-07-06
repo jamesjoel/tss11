@@ -1,0 +1,61 @@
+<form action="teacher/save" method="post">
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <div class="card border border-success">
+                    <div class="card-header bg-success">
+                        <h4 class="text-light">Teacher's Data</h4>
+                    </div>
+                    <div class="card-body"> 
+                        <div class="form-group">
+                            <label>Full Name</label>
+                            <input type="text" class="form-control" name="name"/>
+                        </div>
+                        <div class="form-group">
+                            <label>Salary</label>
+                            <input type="text" class="form-control" name="Salary"/>
+                        </div>
+                        <div class="form-group">
+                            <label>Address</label>
+                            <textarea name="address" class="form-control" ></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label>Contact</label>
+                            <input type="text" class="form-control" name="contact"/>
+                        </div>
+                        <div class="form-group">
+                            <label>City</label>
+                            <select class="form-control" name="city">
+                                <option>Select</option>
+                                <option>Indore</option>
+                                <option>Mumbai</option>
+                                <option>Pune</option>
+                                <option>Hydrabad</option>
+                                <option>Madhurai</option>
+                                <option>Lakhnaw</option>
+                                <option>Ratlam</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Gender</label>
+                            <Br />
+                            Male <input type="radio"  name="gender" value="Male"/>
+                            Female <input type="radio"  name="gender" value="Female"/>
+                        </div>
+    
+                    </div>
+                    <div class="card-footer bg-success">
+                        <input type="submit" value="submit" class="btn btn-light"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </form>
+    
+    
+<a href="/teacher/view_data" class="btn btn-success" >View Data</a>
+
+
+    
+            
