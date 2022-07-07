@@ -1,29 +1,34 @@
-<div class="container" style="min-height: 700px;">
+<div class="container mt-4" style="min-height: 700px;">
     <div class="row">
         <div class="col-md-10 offset-md-1">
-            <h4>List of All Student</h4>
-            <table class="table table-dark table-hover table-bordered mt-4">
+            <h4>View Student</h4>
+            <br />
+            <table class="table table-light table-bordered">
                 <tr>
-                    <th>S.No.</th>
-                    <th>Name</th>
-                    <th>Fee</th>
-                    <th>Class</th>
-                    <th>Address</th>
-                    <th>Gender</th>
-                    <th>Contact</th>
+                    <td>Full Name</td>
+                    <td><%= result.name %></td>
                 </tr>
-
-                <% result.forEach((x, n)=>{ %>
-                    <tr>
-                        <td><%= n+1 %></td>
-                        <td><%= x.name %></td>
-                        <td><%= x.fee %></td>
-                        <td><%= x.class %></td>
-                        <td><%= x.address %></td>
-                        <td><%= x.gender %></td>
-                        <td><%= x.contact %></td>
-                    </tr>
-                <% }) %>
+                <tr>
+                    <td>Fee</td>
+                    <td><%= result.fee %></td>
+                </tr>
+                <tr>
+                    <td>Class</td>
+                    <td><%= result.class %></td>
+                </tr>
+                <tr>
+                    <td>Contact</td>
+                    <td><%= result.contact %></td>
+                </tr>
+                <tr>
+                    <td>Gender</td>
+                    <td><%= result.gender %></td>
+                </tr>
+                <tr>
+                    <td>Address</td>
+                    <td><%= result.address %></td>
+                </tr>
+               
             </table>
         </div>
     </div>

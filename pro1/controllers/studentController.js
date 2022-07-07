@@ -1,5 +1,6 @@
 const routes = require("express").Router();
-const MongoClient = require("mongodb").MongoClient;
+const mongodb = require("mongodb");
+const MongoClient = mongodb.MongoClient;
 
 const dbUrl = "mongodb://localhost:27017";
 const dbName = "tss11_new";
@@ -32,7 +33,7 @@ routes.post("/save", (req, res)=>{
             }
 
             //console.log("data saved");
-            res.redirect("/student/view");
+            res.redirect("/student/list");
         })
 
     });
@@ -41,19 +42,55 @@ routes.post("/save", (req, res)=>{
 
 
 // localhost:3000/student/view
-routes.get("/view", (req, res)=>{
+routes.get("/list", (req, res)=>{
 
     MongoClient.connect(dbUrl, (err, con)=>{
         var db = con.db(dbName);
         db.collection(collName).find().toArray((err, result)=>{
             // console.log(result);
 
-            var pagedata = { pagename : "student/view", result : result };
+            var pagedata = { pagename : "student/list", result : result };
             res.render("layout", pagedata);
         })
     })
     
 })
+
+
+routes.get("/view/:a", (req, res)=>{
+    //console.log(req.params.a);
+
+
+    var id = req.params.a; // 62c540ed0751c016a0ab8d6e
+
+    var objid = mongodb.ObjectId(id); // ObjectId("62c540ed0751c016a0ab8d6e")
+
+    MongoClient.connect(dbUrl, (err, con)=>{
+        var db = con.db(dbName);
+        db.collection(collName).find({ _id : objid }).toArray((err, result)=>{
+
+            // console.log(result[0]);
+            var pagedata = { pagename : "student/view", result : result[0]};
+            res.render("layout", pagedata);
+        })
+    })
+
+
+
+})
+
+
+
+
+// routes.get("/hello/:a/:b/:c", (req, res)=>{
+//     console.log(req.params);
+// })
+
+
+
+
+
+
 
 
 module.exports = routes;
