@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "expresss": "^0.0.0",
+    "random-string-gen": "^1.1.4",
+    "random-string-simple": "^1.0.1"
+  }
+}
