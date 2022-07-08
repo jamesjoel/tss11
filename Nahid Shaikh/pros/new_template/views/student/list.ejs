@@ -1,0 +1,30 @@
+<div class="container" style="min-height: 700px;">
+    <div class="row">
+        <div class="col-md-10 offset-md-1">
+            <h4>Show the List of All Students</h4>
+            <!-- <a href="/student/hello/indore/100/rohit">Hello</a> -->
+            <table class="table table-dark table-hover table-bordered mt-4">
+                <tr>
+                    <th>S.No.</th>
+                    <th>Name</th>
+                    <th>Contact</th>
+                    <th>View</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                </tr>
+
+                <% result.forEach((x, n)=>{ %>
+                    <tr>
+                        <td><%= n+1 %></td>
+                        <td><%= x.name %></td>
+                       
+                        <td><%= x.contact %></td>
+                        <td><a href="/student/view/<%= x._id %>" class="btn btn-sm btn-info">View</a></td>
+                        <td><a href="#" class="btn btn-sm btn-warning">Edit</a></td>
+                        <td><a href="#" class="btn btn-sm btn-danger">Delete</a></td>
+                    </tr>
+                <% }) %>
+            </table>
+        </div>
+    </div>
+</div>

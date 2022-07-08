@@ -13,7 +13,7 @@ app.post("/primeresult",(req,res)=>{
     // return;
     req.body.number =parseInt(req.body.number);
     // console.log(req.body);
-    
+
     var no = req.body.number;
     var prime=true;
     var result="";
