@@ -1,7 +1,9 @@
 const express = require("express");
 const routes = express.Router();
 
-const MongoClient = require("mongodb").MongoClient;
+const mongodb =require("mongodb");
+
+const MongoClient = mongodb.MongoClient;
 const dbUrl = "mongodb://127.0.0.1:27017";
 const dbName = "new_temp";
 const collName = "student";
