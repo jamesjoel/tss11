@@ -20,8 +20,8 @@
                        
                         <td><%= x.contact %></td>
                         <td><a href="/student/view/<%= x._id %>" class="btn btn-sm btn-info">View</a></td>
-                        <td><a href="#" class="btn btn-sm btn-warning">Edit</a></td>
-                        <td><a href="#" class="btn btn-sm btn-danger">Delete</a></td>
+                        <td><a href="/student/edit/<%= x._id %>" class="btn btn-sm btn-warning">Edit</a></td>
+                        <td><a href="/student/delete/<%= x._id %>" class="btn btn-sm btn-danger">Delete</a></td>
                     </tr>
                 <% }) %>
             </table>

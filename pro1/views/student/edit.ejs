@@ -1,0 +1,55 @@
+<div class="container mt-4" style="min-height: 700px;">
+    <div class="row">
+        <div class="col-md-12">
+            <h3>Student Page</h3>
+            <form action="/student/update/<%= result._id %>" method="post">
+                
+            <div class="row">
+                <div class="col-md-6 offset-md-3">
+                    <h4 class="text-center">Update</h4>
+                    <div class="form-group">
+                        <label>Full Name</label>
+                        <input type="text" value="<%= result.name %>" name="name" class="form-control" />
+                    </div>
+                    <Br />
+                    <div class="form-group">
+                        <label>Class</label>
+                        <select class="form-control" name="class">
+                            <option>Select</option>
+                            <% for(var i=1; i<=12; i++){ %>
+                                    
+                                <option <% if(i==result.class){ %> selected  <% } %> ><%= i %></option>
+
+                            <% } %>
+                        </select>
+                    </div>
+                    <Br />
+                    <div class="form-group">
+                        <label>Fee</label>
+                        <input type="text" value="<%= result.fee %>" class="form-control" name="fee"/>
+                    </div>
+                    <br />
+                    <div class="form-group">
+                        <label>Address</label>
+                        <textarea class="form-control" name="address"><%= result.address %></textarea>
+                    </div>
+                    <br />
+                    <div class="form-group">
+                        <label>Contact</label>
+                        <input type="text" value="<%= result.contact %>" class="form-control" name="contact"/>
+                    </div>
+                    <br />
+                    <div class="form-group">
+                        <label>Gender</label>
+                        <Br />
+                        Boy <input type="radio" <% if(result.gender=='boy'){ %> checked <% } %>  name="gender" value="boy"/>
+                        Girl <input type="radio" <% if(result.gender=='girl'){ %> checked <% } %>  name="gender" value="girl"/>
+                    </div>
+                    <br />
+                    <input type="submit" value="Update" class="btn btn-primary" />
+                </div>
+            </div>
+        </form>
+        </div>
+    </div>
+</div>
