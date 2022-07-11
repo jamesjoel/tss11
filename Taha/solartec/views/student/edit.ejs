@@ -1,0 +1,55 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 offset-md-4"><h1> <%= data.Fname %> _Edit Form</h1></div>
+    </div>
+</div>
+
+
+<form action="/student/update/<%=data._id%>" method="post">
+
+    <div class="form-group col-md-6 offset-md-4">
+    <label>Full Name</label>
+    <input type="text" class="form-control" name="Fname" value="<%=data.Fname%>" >
+</div>
+<br>
+<div class="form-group col-md-6 offset-md-4">
+    <label>Email</label>
+    <input type="text" class="form-control" name="email" value="<%=data.email%>">
+</div>
+<br>
+<div class="form-group col-md-6 offset-md-4">
+    <label>password</label>
+    <input type="password" class="form-control" name="password" value="<%=data.password%>">
+</div>
+<br>
+<div class="form-group col-md-6 offset-md-4">
+    <label>address</label>
+    <textarea class="form-control" name="address"><%=data.address%></textarea>
+</div>
+<br>
+
+<div class="form-group col-md-6 offset-md-4">
+    <label>Class</label>
+    <select class="form-control" name="class">
+        <% for(var i=1;i<=12;i++){ %>
+            <option class="form-control" <% if(i == data.class){ %> selected <% } %> > <%= i %></option>
+        <% } %>
+    </select>
+</div>
+<br>
+<div class="form-group col-md-6 offset-md-4">
+    <label>Gender:  </label>
+    Male <input type="radio"  name="gender" value="male"<%if(data.gender=="male"){%> checked <%}%>>
+    Female <input type="radio" name="gender" value="female"<%if(data.gender=="female"){%> checked <%}%>>
+</div>
+<br>
+<div class="form-group col-md-6 offset-md-4">
+    <label>Phone_Number</label>
+    <input type="text" class="form-control" name="pno" value="<%=data.pno%>">
+</div>
+<br>
+<div class=" col-md-6 offset-md-4">
+    <input type="submit" class="btn btn-success" value="Done" >
+    <input type="clear" class="btn btn-info" value="clear">
+</div>
+</form>
