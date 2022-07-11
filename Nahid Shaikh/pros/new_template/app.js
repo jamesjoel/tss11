@@ -14,6 +14,8 @@ app.use(routes);
      res.locals.urlName = req.originalUrl;
   next();
 })
+
+
 const port = process.env.PORT||3000;
 app.listen(port,()=>{
     console.log("server running")
