@@ -57,4 +57,35 @@ routes.get("/teacherData",(req,res)=>{
         })
     })
  })
+
+ routes.get("/delete/:a",(req,res)=>{
+    let objId=mongodb.ObjectId(req.params.a);
+    MongoClient.connect(dbUrl,(err,con)=>{
+        let db=con.db(dbName);
+        db.collection(dbCol).deleteMany({_id:objId},(err)=>{
+            res.redirect("/teacher/teacherData");
+        })
+    })   
+ })
+
+ routes.get("/edit/:a",(req,res)=>{
+    let objId=mongodb.ObjectId(req.params.a);
+    MongoClient.connect(dbUrl,(err,con)=>{
+        let db=con.db(dbName);
+        db.collection(dbCol).find({_id:objId}).toArray((err,result)=>{
+            let pagedata={pagename:"teacher/teacherEdit",title:"Teacher_Edit",data:result[0]}
+            res.render("layout",pagedata);
+        })
+    })
+ })
+
+ routes.post("/update/:a",(req,res)=>{
+    let objId=mongodb.ObjectId(req.params.a);
+    MongoClient.connect(dbUrl,(err,con)=>{
+        let db=con.db(dbName);
+        db.collection(dbCol).updateMany({_id:objId}, {$set:req.body} , (err)=>{
+            res.redirect("/teacher/teacherData");
+        })
+    })
+ })
 module.exports = routes;

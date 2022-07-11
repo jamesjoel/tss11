@@ -1,0 +1,53 @@
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 offset-md-4"><h1><%=data.name%>_Edit Form</h1></div>
+    </div>
+</div>
+
+<form action="/teacher/update/<%=data._id%>" method="post">
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 offset-md-4">
+            <div class="form-group">
+                <label>Full_Name</label>
+                <input type="text" class="form-control"  value="<%= data.name %>" name="name"/>
+                </div>
+                <br>
+                <div class="form-group">
+                    <label>Salary</label>
+                    <input type="text" class="form-control"name="salary"value="<%= data.salary %>"/>
+                </div>
+                <br>
+                <div class="form-group">
+                    <label>city</label>
+                    <select class="form-control" name="city">
+                            <option  selected><%= data.city %></option>
+                            <option>Indore</option>
+                            <option>Ujjain</option>
+                            <option>Bhopal</option>
+                            <option>Mumbai</option>
+                            <option>Banglore</option>
+                            <option>Pune</option>
+                    </select>
+                </div>
+                <br>
+                <div class="form-group">
+                    <label>Gender:</label>
+                    Male <input type="radio" name="gender"  <%if(data.gender=="male"){ %>checked<% } %>  value="male"/>
+                    Female <input type="radio" name="gender"  <%if(data.gender=="female"){ %>checked<% } %>  value="female"/>
+                </div>
+                <br>
+                <div class="form-group">
+                    <label>Contact</label>
+                    <input type="text" class="form-control" name="contact" value="<%= data.contact %>"/>
+                </div>
+                <br>
+              <input type="submit" class="btn btn-outline-danger" value="update">
+              <input type="clear" class="btn btn-outline-primary" value="reset">
+        </div>
+    </div>
+</div>
+
+</form>

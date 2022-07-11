@@ -20,8 +20,8 @@
             <td><%=x.name%></td>
             <td><%=x.contact%></td>
             <td><a href="/teacher/more/<%=x._id%>" class="btn btn-sm btn-primary">more</a></td>
-            <td><a href="#" class="btn btn-sm btn-info">edit</a></td>
-            <td><a href="#" class="btn btn-sm btn-danger">delete</a></td>
+            <td><a href="/teacher/edit/<%=x._id%>" class="btn btn-sm btn-info">edit</a></td>
+            <td><a href="/teacher/delete/<%=x._id%>" class="btn btn-sm btn-danger">delete</a></td>
 
         </tr>
         <% });  %>
