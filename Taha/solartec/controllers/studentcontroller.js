@@ -1,7 +1,7 @@
 const express=require("express")
 const routes=express.Router();
-
-const MongoClient = require("mongodb").MongoClient;
+const mongodb=require("mongodb")
+const MongoClient = mongodb.MongoClient;
 let dbUrl="mongodb://localhost:27017";
 let dbName="soltec";
 let colName="student";
@@ -32,7 +32,35 @@ routes.post("/form",(req,res)=>{
 })
 
 
+routes.get("/studentData",(req,res)=>{
+    MongoClient.connect(dbUrl,(err,con)=>{
+        let db=con.db(dbName);
+        db.collection(colName).find().toArray((err,result)=>{
+            // console.log(result);
+            // return;
+            let pagedata={pagename:"student/studentData",title:"Student_Data",result:result};
+            res.render("layout",pagedata)   
+
+        })
+    })
+})
 
 
+routes.get("/more/:a",(req,res)=>{
+    // console.log(req.params.a)
+    var id=req.params.a;
+    var objID=mongodb.ObjectId(id);
+    // console.log(objID);
+    // return;
+    MongoClient.connect(dbUrl,(err,con)=>{
+        let db=con.db(dbName);
+        db.collection(colName).find({_id:objID}).toArray((err,result)=>{
+            let pagedata={pagename:"student/more",title:"More Information", result:result[0]}
+            res.render("layout",pagedata)
+
+        })
+    })
+
+})
 
 module.exports= routes;

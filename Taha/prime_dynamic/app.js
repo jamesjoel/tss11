@@ -15,20 +15,25 @@ app.post("/primeresult",(req,res)=>{
     // console.log(req.body);
 
     var no = req.body.number;
-    var prime=true;
-    var result="";
-    for(let i=2;i<no;i++){
+    var res=true;
+    var prime=""
+    // console.log(no);
+    for(let i=2;i<=no-1;i++){
         if(no%i==0){
-            prime=false;
+            res=false;
             break;
         }
     }
-    if(prime){
-        result="not a prime"
-    }else{
-        result="is a prime"
+    if(res==true){
+        prime="yes"
     }
-    console.log(result);
+    else{
+        prime="no"
+    }
+    // console.log(prime)
+    var pagedata={pagename:"result",result:prime};
+    res.render("home",pagedata);
+    // res.redirect("/result");
 })
 
 app.listen(3000,()=>{

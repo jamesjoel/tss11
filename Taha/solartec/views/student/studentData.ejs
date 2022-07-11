@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 offset-md-4"><h1>TeacherData</h1></div>
+    </div>
+
+
+    <table class="table table-dark table-hover table-bordered">
+        <tr>
+            <td>S.no</td>
+            <td>Name</td>
+            <td>contact</td>
+            <td>More</td>
+            <td>edit</td>
+            <td>delete</td>
+
+        </tr>
+        <%  result.forEach((x,n) => { %>
+            <tr>
+                <td><%=n+1%></td>
+                <td><%=x.Fname%></td>
+                <td><%=x.pno%></td>
+                <td><a href="/student/more/<%=x._id%>" class="btn btn-sm btn-primary">more</a></td>
+                <td><a href="#" class="btn btn-sm btn-info">edit</a></td>
+                <td><a href="#" class="btn btn-sm btn-danger">delete</a></td>
+    
+            </tr>
+            <% });  %>
+    
+    </table>
+</div>
