@@ -1,7 +1,7 @@
 <div class="container">
     <div class="row">
         <div class="col-md-8 offset-md-2">
-            <h1>List of all Teachers</h1>
+            <h1>List of all Students</h1>
 <table class="table text-center table-dark text-light table-hover table-bordered">
     <tr  >
         <th>S.No</th>
@@ -13,15 +13,15 @@
     </tr>
     <h1><%=result.name%></h1>
 
-<% result.forEach ((x, n)=>{%>
-   <Tr>
+<% result.forEach((x,n) => { %>
+   <tr>
     <td><%= n+1 %></td>
     <td><%= x.name %></td>
     <td><%= x.contact %></td>
     <td><a href="/student/View/<%= x._id %>" class="btn btn-md btn-info">View</a></td>
     <td><a href="#" class="btn btn-md btn-warning">Edit</a></td>
     <td><a href="#" class="btn btn-md btn-danger">Delete</a></td>
-</Tr>
+   </tr>
  <%  })   %>
 </table>
 

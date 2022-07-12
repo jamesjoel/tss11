@@ -14,7 +14,9 @@ routes.get("/", (req, res)=>{
 routes.post("/form", (req , res)=>{
     
     req.body.class = parseInt(req.body.class);    
-    req.body.fees = parseInt(req.body.fees);    
+    req.body.fees = parseInt(req.body.fees);  
+    // console.log(req.body)
+    // return;  
     MongoClient.connect(dbUrl, (err, con)=>{
         if(err){
             console.log(err);
@@ -26,7 +28,7 @@ routes.post("/form", (req , res)=>{
                 console.log(err);
                 return;
             }
-            res.redirect("./list")
+            res.redirect("/list")
             })
         })
 
@@ -35,7 +37,11 @@ routes.get("/list" , (req, res)=>{
 MongoClient.connect(dbUrl, (err, con)=>{
     var db = con.db(dbname);
     db.collection(collname).find().toArray((err, result)=>{
-        var pagedata = {pagename : "list", title : "student list", result : result,} ;
+        // console.log(result)
+        // return;
+        var pagedata = {pagename : "list", title : "student list", result : result} ;
+        // console.log(result[0])
+            // return;
         res.render("layout" , pagedata)  
         
         })
