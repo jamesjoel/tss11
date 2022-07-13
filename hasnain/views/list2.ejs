@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <h1 class="text-center">List of all Teachers</h1>
+<table class="table table-dark text-light table-hover table-bordered">
+    <tr>
+        <th>S.No</th>
+        <th>Full Name</th>
+        <th>Contact</th>
+        <th>View</th>
+        <th>Edit</th>
+        <th>Delete</th>
+    </tr>
+    <h1><%=result.name%></h1>
+
+<% result.forEach ((x, n)=>{%>
+   <tr>
+    <td><%= n+1 %></td>
+    <td><%= x.name%></td>
+    <td><%= x.number %></td>
+        <td><a href="#" class="btn btn-md btn-primary">View</a></td>
+        <td><a href="#" class="btn btn-md btn-warning">Edit</a></td>
+        <td><a href="#" class="btn btn-md btn-danger">Delete</a></td>
+
+</tr>
+<%  })   %>
+</table>
+
+        </div>
+    </div>
+</div>
+
