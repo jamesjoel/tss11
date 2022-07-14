@@ -1,10 +1,16 @@
 const routes = require("express").Router();
 const mongodb = require("mongodb");
 const Student = require("../models/Student");
+const City = require("../models/City");
 
 routes.get("/", (req, res)=>{
-    var pagedata = { pagename : "student/index" };
-    res.render("layout", pagedata);
+
+    City.bring({}, (err, result)=>{
+
+        var pagedata = { pagename : "student/index", result : result };
+        res.render("layout", pagedata);
+    })
+
 })
 routes.post("/save", (req, res)=>{
     req.body.class = parseInt(req.body.class);

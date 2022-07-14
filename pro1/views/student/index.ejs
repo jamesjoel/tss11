@@ -24,6 +24,16 @@
                     </div>
                     <Br />
                     <div class="form-group">
+                        <label>City</label>
+                        <select class="form-control">
+                            <option>Select</option>
+                            <% result.forEach((x)=>{ %>
+                                <option><%= x.name %></option>
+                            <% }) %>
+                        </select>
+                    </div>
+                    <Br />
+                    <div class="form-group">
                         <label>Fee</label>
                         <input type="text" class="form-control" name="fee"/>
                     </div>
