@@ -46,9 +46,12 @@ routes.get("/delete/:a", (req, res)=>{
 
 routes.get("/edit/:a", (req, res)=>{
     var objid = mongodb.ObjectId(req.params.a);
-    Student.search({ _id : objid }, (err, result)=>{
-        var pagedata = { pagename : "student/edit", result : result[0]};
-        res.render("layout", pagedata);
+    Student.search({ _id : objid }, (err, result1)=>{
+        City.bring({}, (err, result2)=>{
+
+            var pagedata = { pagename : "student/edit", result : result1[0], cities : result2 };
+            res.render("layout", pagedata);
+        })
     })
 })
 

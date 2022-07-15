@@ -30,6 +30,16 @@
                     </div>
                     <br />
                     <div class="form-group">
+                        <label>City</label>
+                        <select class="form-control" name="city">
+                            <option>Select</option>
+                            <% cities.forEach((x)=>{ %>
+                                <option <% if(x.name==result.city){ %> selected  <% } %> ><%= x.name %></option>
+                            <% }) %>
+                        </select>
+                    </div>
+                    <br />
+                    <div class="form-group">
                         <label>Address</label>
                         <textarea class="form-control" name="address"><%= result.address %></textarea>
                     </div>
