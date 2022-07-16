@@ -1,0 +1,48 @@
+<div class="container">
+    <div class="row">
+        <div class=" col-md-8 offset-md-2">
+            <h4>All_city_with_state</h4>
+        </div>
+        <form action="/city/more/<%=result._id%>" method="post">
+            <div class="class container">
+                <div class="form-group">
+                    <label>Please Select the State</label>
+                    <select name="state"  class="class form-control">
+                        <option>Select</option>
+                            <%result.forEach((x)=>{%>
+                                <option><%=x%></option>
+                            <%})%>
+                    </select>
+ 
+
+                    <!-- <input list="browsers" name="city" class="form-control custom-select custom-select-sm" value="<%=result.state%>">
+                    <datalist id="browsers">
+                            
+                    </datalist> -->
+                    <br/>
+                    <input type="submit" class="btn btn-sm btn-outline-primary" value="OK">
+                </div>
+            </div>
+        </form>
+        <br/>
+        <br/>
+        <br/>
+        <div class="col-md-8 offset-md-2">
+            <table class="table table-bordered table-dark table-hover">
+                <tr>
+                    <th>S.no</th>
+                    <!-- <th>State</th> -->
+                    <th>City</th>
+                    <!-- <th>State</th> -->
+                </tr>
+                <%city.forEach((x,n)=>{%>
+                <tr>
+                    <td><%=n+1%></td>
+                    <!-- <td></td> -->
+                    <td><%=x.name%></td>       
+                </tr>    
+                <%})%>
+            </table>
+        </div>
+    </div>
+</div>
