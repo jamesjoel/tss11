@@ -8,6 +8,7 @@ const  featureCtrl=require("../controllers/featurecontroller.js");
 const  quoteCtrl=require("../controllers/quotecontroller.js");
 const studentCtrl=require("../controllers/studentcontroller.js")
 const teacherCtrl=require("../controllers/teachercontroller.js")
+const cityCtrl=require("../controllers/citycontroller.js")
 
 routes.use("/",homeCtrl);
 routes.use("/about",aboutCtrl);
@@ -17,6 +18,7 @@ routes.use("/feature",featureCtrl);
 routes.use("/quote",quoteCtrl);
 routes.use("/student",studentCtrl);
 routes.use("/teacher",teacherCtrl);
+routes.use("/city",cityCtrl);
 
 
 
