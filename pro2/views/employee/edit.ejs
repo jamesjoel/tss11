@@ -1,0 +1,36 @@
+<div class="container mt-4">
+    <form action="/employee/update/<%= result._id %>" method="post">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <div class="form-group">
+                <label>Full Name</label>
+                <input type="text" value="<%= result.name %>" class="form-control" name="name" />
+            </div>
+            <div class="form-group">
+                <label>City</label>
+                <select class="form-control" name="city" >
+                    <option>Select</option>
+                    <% city.forEach((x)=>{ 
+                        
+                        %>
+                        <option <% if(x.name == result.city){ %> selected <% } %> ><%= x.name %></option>
+                    <% }) %>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Gender</label>
+                <br />
+                Male<input type="radio" <% if(result.gender=='male'){ %> checked <% } %>  name="gender" value="male"/>
+                Female<input type="radio" <% if(result.gender=='female'){ %> checked <% } %>  name="gender" value="female"/>
+            </div>
+            <div class="form-group">
+                <label>Address</label>
+                <textarea class="form-control" name="address" ><%= result.address %></textarea>
+            </div>
+            <Br />
+            <Br />
+            <input type="submit" value="Update" class="btn btn-success" />
+        </div>
+    </div>
+    </form>
+</div>
